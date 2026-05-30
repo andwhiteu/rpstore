@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Teks Berjalan - Andwhiteu Store</title>
+    
+    <script>
+        /* Variabel teks yang akan digerakkan */
+        let teks = " ANDWHITEU STORE : MENYEDIAKAN JASA SETUP PERCANTIK ACCOUNT ROLEPAYER KAMU DENGAN HARGA MURAH DAN PREMIUM * ";
+
+        /* Fungsi untuk memindahkan karakter pertama ke akhir secara berulang */
+        function jalan(){
+            teks = teks.substring(1) + teks.charAt(0);
+            document.getElementById("jalan").innerHTML = teks;
+            /* Mengatur kecepatan jalan teks (200 milidetik) */
+            setTimeout(jalan, 200);
+        }
+    </script>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+        }
+        #jalan {
+            font-family: Arial;
+            font-weight: bold;
+            color: #1565C0; /* Warna Biru Gelap Premium[cite: 6] */
+            white-space: nowrap;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body onload="jalan()">
+
+    <!-- Elemen tujuan untuk menampilkan teks berjalan -->
+    <h2 id="jalan"></h2>
+
+</body>
+</html>
